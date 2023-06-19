@@ -6,6 +6,46 @@
     <link rel="icon" sizes="192x192" href="https://raunak1089.github.io/Required-files/favicon.ico">
 
     <script src="https://raunak1089.github.io/all_scripts/fontawesome.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: auto;
+            color: green;
+        }
+        
+        div:hover {
+            background-color: #ebebeb;
+        }
+        
+        div i {
+            margin-right: 10px;
+        }
+        
+        div span {
+            flex: 1;
+        }
+    </style>
+
 </head>
 <body>
   <h1>GitHub Repositories</h1>
@@ -194,11 +234,10 @@
   <script>
     for(e of document.querySelectorAll('div')){
         e.innerHTML += `
-        <i class="fa-light fa-code" onclick="window.open('https://github.com/Raunak1089/' + this.parentElement.querySelector('a').href.split('/')[3])"></i>
+        <i style="margin-left:auto" class="fa-light fa-code" onclick="window.open('https://github.com/Raunak1089/' + this.parentElement.querySelector('a').href.split('/')[4])"></i>
         `;
     }
     
   </script>
-
 </body>
 </html>
