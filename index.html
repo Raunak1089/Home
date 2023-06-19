@@ -191,6 +191,14 @@
       <span>Clock</span>
     </a>
   </div>
-  
+  <script>
+    for(e of document.querySelectorAll('div')){
+        e.innerHTML += `
+        <i class="fa-light fa-code" onclick="window.open('https://github.com/Raunak1089/' + this.parentElement.querySelector('a').href.split('/')[4])"></i>
+        `;
+    }
+    
+  </script>
+
 </body>
 </html>
