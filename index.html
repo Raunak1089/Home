@@ -18,7 +18,7 @@
             text-align: center;
         }
         
-        div {
+        div.row {
             display: flex;
             align-items: center;
             margin-bottom: 10px;
@@ -33,206 +33,260 @@
             color: green;
         }
         
-        div:hover {
+        div.row:hover {
             background-color: #ebebeb;
         }
         
-        div i {
+        div.row i {
             margin-right: 10px;
         }
         
-        div span {
+        div.row span {
             flex: 1;
         }
+
+#launcher{
+    margin: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: Montserrat;
+}
+#launcher > div{
+    margin: 3%;
+    height: 100px;
+    min-width: 100px;
+    background: rgb(154, 60, 154);
+    width: fit-content;
+    padding: 0px 5px;
+    color: white;
+    text-align: center;
+    border: dotted;
+    cursor: pointer;
+    user-select: none;
+}
+#launcher > div:hover{
+    filter: brightness(0.5);
+}
+div#launcher i{
+    font-size: 3em;
+    transform: translateY(50%);
+}
+div#launcher .tle{
+    transform: translateY(50%);
+    font-size: 0.9em;
+    line-height: 5;
+}
+
     </style>
 
 </head>
 <body>
-  <h1>GitHub Repositories</h1>
+  <h1>Apps</h1>
   
-  <div>
+
+<div id="launcher">
+    <div onclick="location.href='https://raunak1089.github.io/Ball_bullet_game'"><i class="fa-solid fa-gun"></i><br><span class="tle">Ball_bullet_game</span></div>
+    <div onclick="location.href='https://raunak1089.github.io/ChatBot'"><i class="fa-solid fa-message-bot"></i><br><span class="tle">ChatBot</span></div>
+    <div onclick="location.href='https://raunak1089.github.io/Newton_interpolation'"><i class="fa-regular fa-chart-line"></i><br><span class="tle">Newton interpolation</span></div>
+    <div onclick="location.href='https://raunak1089.github.io/fitting_beta'"><i class="fa-light fa-chart-scatter"></i><br><span class="tle">Fitting</span></div>
+    <div onclick="location.href='https://raunak1089.github.io/Battery'"><i class="fa-light fa-battery-bolt"></i><br><span class="tle">Battery</span></div>
+    <div onclick="location.href='https://raunak1089.github.io/WBCHSE-HS-marks-2021'"><i class="fa-light fa-book-open-cover"></i><br><span class="tle">HS Marks</span></div>
+    <div onclick="location.href='https://raunak1089.github.io/Image_Process'"><i class="fa-regular fa-image"></i><br><span class="tle">Image_Process</span></div>
+    <div onclick="location.href='https://raunak1089.github.io/Difference_Table'"><i class="fa-light fa-stairs"></i><br><span class="tle">Difference_Table</span></div>
+    <div onclick="location.href='https://raunak1089.github.io/Clock'"><i class="fa-light fa-clock"></i><br><span class="tle">Clock</span></div>
+    
+</div>
+
+
+
+
+  <h1>GitHub Repositories</h1>
+
+
+  <div class="row">
     <a href="https://raunak1089.github.io/all_scripts">
       <i class="fa-thin fa-globe"></i>
       <span>all_scripts</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Required-files">
       <i class="fa-thin fa-globe"></i>
       <span>Required-files</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/ChatBot">
       <i class="fa-thin fa-globe"></i>
       <span>ChatBot</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/fitting_beta">
       <i class="fa-thin fa-globe"></i>
       <span>fitting_beta</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Newton_interpolation">
       <i class="fa-thin fa-globe"></i>
       <span>Newton_interpolation</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/WhatsAppSourceCode">
       <i class="fa-thin fa-globe"></i>
       <span>WhatsAppSourceCode</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Flask_Calc">
       <i class="fa-thin fa-globe"></i>
       <span>Flask_Calc</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/WebBluetooth">
       <i class="fa-thin fa-globe"></i>
       <span>WebBluetooth</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Ball_bullet_game">
       <i class="fa-thin fa-globe"></i>
       <span>Ball_bullet_game</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/fonts">
       <i class="fa-thin fa-globe"></i>
       <span>fonts</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Battery">
       <i class="fa-thin fa-globe"></i>
       <span>Battery</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Raunak1089">
       <i class="fa-thin fa-globe"></i>
       <span>Raunak1089</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/censored">
       <i class="fa-thin fa-globe"></i>
       <span>censored</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/WBCHSE-HS-marks-2021">
       <i class="fa-thin fa-globe"></i>
       <span>WBCHSE-HS-marks-2021</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/php_site">
       <i class="fa-thin fa-globe"></i>
       <span>php_site</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/fitting">
       <i class="fa-thin fa-globe"></i>
       <span>fitting</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/svg">
       <i class="fa-thin fa-globe"></i>
       <span>svg</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/WhatsApp_codepen">
       <i class="fa-thin fa-globe"></i>
       <span>WhatsApp_codepen</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/xyz">
       <i class="fa-thin fa-globe"></i>
       <span>xyz</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/motion_sensors">
       <i class="fa-thin fa-globe"></i>
       <span>motion_sensors</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Image_Process">
       <i class="fa-thin fa-globe"></i>
       <span>Image_Process</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Difference_Table">
       <i class="fa-thin fa-globe"></i>
       <span>Difference_Table</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/range_slider">
       <i class="fa-thin fa-globe"></i>
       <span>range_slider</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Online_Tutorials">
       <i class="fa-thin fa-globe"></i>
       <span>Online_Tutorials</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/random">
       <i class="fa-thin fa-globe"></i>
       <span>random</span>
     </a>
   </div>
   
-  <div>
+  <div class="row">
     <a href="https://raunak1089.github.io/Clock">
       <i class="fa-thin fa-globe"></i>
       <span>Clock</span>
     </a>
   </div>
   <script>
-    for(e of document.querySelectorAll('div')){
+    for(e of document.querySelectorAll('div.row')){
         e.innerHTML += `
         <i style="margin-left:auto" class="fa-light fa-code" onclick="window.open('https://github.com/Raunak1089/' + this.parentElement.querySelector('a').href.split('/')[3])"></i>
         `;
