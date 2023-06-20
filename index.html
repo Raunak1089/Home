@@ -45,18 +45,17 @@
             flex: 1;
         }
 
-#launcher{
+.launcher{
     margin: 3%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-family: Montserrat;
 }
-#launcher > div{
+.launcher > div{
     margin: 3%;
     height: 100px;
     min-width: 100px;
-    background: rgb(154, 60, 154);
     width: fit-content;
     padding: 0px 5px;
     color: white;
@@ -65,14 +64,14 @@
     cursor: pointer;
     user-select: none;
 }
-#launcher > div:hover{
+.launcher > div:hover{
     filter: brightness(0.5);
 }
-div#launcher i{
+div.launcher i{
     font-size: 3em;
     transform: translateY(50%);
 }
-div#launcher .tle{
+div.launcher .tle{
     transform: translateY(50%);
     font-size: 0.9em;
     line-height: 5;
@@ -82,10 +81,10 @@ div#launcher .tle{
 
 </head>
 <body>
-  <h1>Apps</h1>
+  <h1>GitHub Apps</h1>
   
 
-<div id="launcher">
+<div class="launcher">
     <div onclick="location.href='https://raunak1089.github.io/Ball_bullet_game'"><i class="fa-solid fa-gun"></i><br><span class="tle">Ball_bullet_game</span></div>
     <div onclick="location.href='https://raunak1089.github.io/ChatBot'"><i class="fa-solid fa-message-bot"></i><br><span class="tle">ChatBot</span></div>
     <div onclick="location.href='https://raunak1089.github.io/Newton_interpolation'"><i class="fa-regular fa-chart-line"></i><br><span class="tle">Newton interpolation</span></div>
@@ -95,6 +94,24 @@ div#launcher .tle{
     <div onclick="location.href='https://raunak1089.github.io/Image_Process'"><i class="fa-regular fa-image"></i><br><span class="tle">Image_Process</span></div>
     <div onclick="location.href='https://raunak1089.github.io/Difference_Table'"><i class="fa-light fa-stairs"></i><br><span class="tle">Difference_Table</span></div>
     <div onclick="location.href='https://raunak1089.github.io/Clock'"><i class="fa-light fa-clock"></i><br><span class="tle">Clock</span></div>
+    
+</div>
+
+
+  <h1>CodePen Apps</h1>
+  
+
+<div class="launcher">
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/mdzKqXa'"><i class="fa-solid fa-chart-simple"></i><br><span class="tle">Sampling</span></div>
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/LYrJdaW'"><i class="fa-light fa-grip-dots"></i><br><span class="tle">LUDO pattern</span></div>
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/JjvepVN'"><i class="fa-thin fa-waveform"></i><br><span class="tle">Graph_Sound</span></div>
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/RwYLYwa'"><i class="fa-light fa-chart-scatter-bubble"></i><br><span class="tle">Fit Plane Beta</span></div>
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/BaVJEBR'"><i class="fa-brands fa-html5"></i><br><span class="tle">Run_html</span></div>
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/RwyOVXR'"><i class="fa-regular fa-paintbrush-pencil"></i><br><span class="tle">Paint canvas</span></div>
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/poVBPqL'"><i class="fa-light fa-chart-gantt"></i><br><span class="tle">Cumulative Distribution</span></div>
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/wvjZdgG'"><i class="fa-sharp fa-light fa-wave-sine"></i><br><span class="tle">Lagrange interpolation</span></div>
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/abwdmJy'"><i class="fa-sharp fa-solid fa-crow"></i><br><span class="tle">Dinosaur</span></div>
+    <div onclick="location.href='https://codepen.io/Raunak1089/full/OJgvVXE'"><i class="fa-regular fa-signal-stream"></i><br><span class="tle">Doppler</span></div>
     
 </div>
 
@@ -290,6 +307,13 @@ div#launcher .tle{
         e.innerHTML += `
         <i style="margin-left:auto" class="fa-light fa-code" onclick="window.open('https://github.com/Raunak1089/' + this.parentElement.querySelector('a').href.split('/')[3])"></i>
         `;
+    }
+
+    for (i of document.querySelectorAll('.launcher > div')){
+        r=Math.round(256*Math.random());
+        g=Math.round(256*Math.random());
+        b=Math.round(256*Math.random());
+        i.style.background=`rgb(${r},${g},${b})`;
     }
     
   </script>
