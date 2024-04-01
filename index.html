@@ -95,6 +95,30 @@ summary{
     font-weight: bold;
     cursor: pointer;
 }
+
+/*    CONTEXT MENU    */
+
+    hr {
+        margin: 0;
+    }
+
+    .context-menu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 1px 0px;
+    }
+
+    .context-menu div {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .context-menu div:hover {
+        background: lightgray;
+    }
+
     </style>
 
 </head>
@@ -350,6 +374,17 @@ summary{
   </div>
 </details>
 
+
+    <!-- CONTEXT MENU     -->
+    <div id="contextMenu" class="context-menu">
+      <div id="editOption" onclick="editIndex(this)">Edit Index</div>
+      <hr />
+      <div id="renameOption" onclick="view(this)">View</div>
+      <hr />
+      <div id="deleteOption" onclick="visit(this)">Visit</div>
+    </div>
+
+    
   <script>
     for(e of document.querySelectorAll('div.row')){
         e.innerHTML += `
@@ -363,6 +398,70 @@ summary{
         b=Math.round(256*Math.random());
         i.style.background=`rgb(${r},${g},${b})`;
     }
+
+      //    CONTEXT MENU    _____________________________________________
+
+        document.addEventListener("DOMContentLoaded", function () {
+        var myDiv = document.getElementById("myDiv");
+        var contextMenu = document.getElementById("contextMenu");
+
+        myDiv.addEventListener("contextmenu", function (event) {
+          event.preventDefault();
+
+          // Show the context menu at the position of the mouse pointer
+          contextMenu.style.display = "block";
+          contextMenu.style.left = event.pageX + "px";
+          contextMenu.style.top = event.pageY + "px";
+
+          // Hide the context menu when clicked outside
+          document.addEventListener("click", hideContextMenu);
+        });
+
+        // Prevent default context menu from appearing
+        contextMenu.addEventListener("contextmenu", function (event) {
+          event.preventDefault();
+        });
+
+        function hideContextMenu() {
+          contextMenu.style.display = "none";
+          document.removeEventListener("click", hideContextMenu);
+        }
+
+        // Example event listeners for edit and rename options
+        document
+          .getElementById("editOption")
+          .addEventListener("click", function () {
+            alert("Edit option clicked");
+            hideContextMenu();
+          });
+
+        document
+          .getElementById("renameOption")
+          .addEventListener("click", function () {
+            alert("Rename option clicked");
+            hideContextMenu();
+          });
+      });
+
+
+      function editIndex(element) {
+        let repository = element.getAttribute("onclick").split("'")[2].split('/')[3];
+        let editLink = `https://github.com/Raunak1089/${repository}/edit/main/index.html`;
+        window.open(editLink);
+      }
+
+      function view(element) {
+        let repository = element.getAttribute("onclick").split("'")[2].split('/')[3];
+        let viewLink = `https://github.com/Raunak1089/${repository}`;
+        window.open(viewLink);
+      }
+
+      function visit(element) {
+        let repository = element.getAttribute("onclick").split("'")[2].split('/')[3];
+        let viewLink = `https://raunak1089.github.io/${repository}/`;
+        window.open(viewLink);
+      }
+
     
   </script>
 </body>
