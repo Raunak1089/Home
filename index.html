@@ -402,46 +402,50 @@ summary{
       //    CONTEXT MENU    _____________________________________________
 
         document.addEventListener("DOMContentLoaded", function () {
-        var myDiv = document.getElementById("myDiv");
-        var contextMenu = document.getElementById("contextMenu");
-
-        myDiv.addEventListener("contextmenu", function (event) {
-          event.preventDefault();
-
-          // Show the context menu at the position of the mouse pointer
-          contextMenu.style.display = "block";
-          contextMenu.style.left = event.pageX + "px";
-          contextMenu.style.top = event.pageY + "px";
-
-          // Hide the context menu when clicked outside
-          document.addEventListener("click", hideContextMenu);
-        });
-
-        // Prevent default context menu from appearing
-        contextMenu.addEventListener("contextmenu", function (event) {
-          event.preventDefault();
-        });
-
-        function hideContextMenu() {
-          contextMenu.style.display = "none";
-          document.removeEventListener("click", hideContextMenu);
-        }
-
-        // Example event listeners for edit and rename options
-        document
-          .getElementById("editOption")
-          .addEventListener("click", function () {
-            alert("Edit option clicked");
-            hideContextMenu();
+          var contextMenu = document.getElementById("contextMenu");
+        
+          // Prevent default context menu from appearing
+          contextMenu.addEventListener("contextmenu", function (event) {
+            event.preventDefault();
           });
-
-        document
-          .getElementById("renameOption")
-          .addEventListener("click", function () {
-            alert("Rename option clicked");
-            hideContextMenu();
+        
+          function hideContextMenu() {
+            contextMenu.style.display = "none";
+            document.removeEventListener("click", hideContextMenu);
+          }
+        
+          // Example event listeners for edit and rename options
+          document
+            .getElementById("editOption")
+            .addEventListener("click", function () {
+              alert("Edit option clicked");
+              hideContextMenu();
+            });
+        
+          document
+            .getElementById("renameOption")
+            .addEventListener("click", function () {
+              alert("Rename option clicked");
+              hideContextMenu();
+            });
+        
+          // Add event listeners to each element in GitHubAppsdivs
+          var GitHubAppsdivs = document.querySelectorAll('div.launcher:first-of-type > div');
+          GitHubAppsdivs.forEach(function (element) {
+            element.addEventListener("contextmenu", function (event) {
+              event.preventDefault();
+        
+              // Show the context menu at the position of the mouse pointer
+              contextMenu.style.display = "block";
+              contextMenu.style.left = event.pageX + "px";
+              contextMenu.style.top = event.pageY + "px";
+        
+              // Hide the context menu when clicked outside
+              document.addEventListener("click", hideContextMenu);
+            });
           });
-      });
+        });
+        
 
 
       function editIndex(element) {
