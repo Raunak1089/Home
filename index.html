@@ -449,19 +449,19 @@ summary{
 
 
       function editIndex(element) {
-        let repository = element.getAttribute("onclick").split("'")[2].split('/')[3];
+        let repository = element.getAttribute("onclick").split("'")[1].split('/')[3];
         let editLink = `https://github.com/Raunak1089/${repository}/edit/main/index.html`;
         window.open(editLink);
       }
 
       function view(element) {
-        let repository = element.getAttribute("onclick").split("'")[2].split('/')[3];
+        let repository = element.getAttribute("onclick").split("'")[1].split('/')[3];
         let viewLink = `https://github.com/Raunak1089/${repository}`;
         window.open(viewLink);
       }
 
       function visit(element) {
-        let repository = element.getAttribute("onclick").split("'")[2].split('/')[3];
+        let repository = element.getAttribute("onclick").split("'")[1].split('/')[3];
         let viewLink = `https://raunak1089.github.io/${repository}/`;
         window.open(viewLink);
       }
