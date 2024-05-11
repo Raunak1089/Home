@@ -378,11 +378,11 @@ summary{
 
     <!-- CONTEXT MENU     -->
     <div id="contextMenu" class="context-menu">
-      <div id="editOption" onclick="editIndex(this)">Edit Index</div>
+      <div id="editOption">Edit Index</div>
       <hr />
-      <div id="renameOption" onclick="view(this)">View</div>
+      <div id="viewOption">View</div>
       <hr />
-      <div id="deleteOption" onclick="visit(this)">Visit</div>
+      <div id="visitOption">Visit</div>
     </div>
 
     
@@ -415,28 +415,37 @@ summary{
             document.removeEventListener("click", hideContextMenu);
           }
         
-          // Example event listeners for edit and rename options
+          // Example event listeners for edit and view options
           document
             .getElementById("editOption")
             .addEventListener("click", function () {
-              alert("Edit option clicked");
+              editIndex(currentFocus);
               hideContextMenu();
             });
         
           document
-            .getElementById("renameOption")
+            .getElementById("viewOption")
             .addEventListener("click", function () {
-              alert("Rename option clicked");
+              view(currentFocus);
+              hideContextMenu();
+            });
+        
+          document
+            .getElementById("visitOption")
+            .addEventListener("click", function () {
+              visit(currentFocus);
               hideContextMenu();
             });
         
           // Add event listeners to each element in GitHubAppsdivs
+            let currentFocus;
           var GitHubAppsdivs = document.querySelectorAll('div.launcher:first-of-type > div');
           GitHubAppsdivs.forEach(function (element) {
             element.addEventListener("contextmenu", function (event) {
               event.preventDefault();
         
               // Show the context menu at the position of the mouse pointer
+                currentFocus = element;
               contextMenu.style.display = "block";
               contextMenu.style.left = event.pageX + "px";
               contextMenu.style.top = event.pageY + "px";
