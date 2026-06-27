@@ -274,12 +274,6 @@ summary{
 
     
   <script>
-    for(e of document.querySelectorAll('div.row')){
-        e.innerHTML += `
-        <i style="margin-left:auto" class="fa-solid fa-code" onclick="window.open('https://github.com/Raunak1089/' + this.parentElement.querySelector('a').href.split('/')[3])"></i>
-        `;
-    }
-
     for (i of document.querySelectorAll('.launcher > div')){
         r=Math.round(256*Math.random());
         g=Math.round(256*Math.random());
